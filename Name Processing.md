@@ -7,12 +7,12 @@
 - no double spaces between surnames
 - last name cannot be abbreviated
 
-## Should Match
+### Should Match
 
 Alberto Bruno C Daniel E F Giordano
 Alberto Bruno C Daniel E F. Giordano
 
-## Should NOT Match
+### Should NOT Match
 
 Alberto
 A Bruno C
@@ -21,3 +21,7 @@ A. Bruno C Daniel E F. Giordano
 Alberto Bruno C DOUBLE  SPACE E F Giordano
  Leading Whitespace Alberto Bruno C Daniel E F Giordano
 Trailing Whitespace Alberto Bruno C Daniel E F Giordano 
+
+## No abbreviations Variations
+
+`^([[:upper:]][[:lower:]]+ )([[:upper:]][[:lower:]]+ )*([[:upper:]][[:lower:]]+$)`
